@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using SystemPag.Models;
 
 namespace SystemPag.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
        

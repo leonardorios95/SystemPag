@@ -3,31 +3,45 @@
 }
 
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-4">
+            <h1>Demonstrativo de Pagamento</h1>
+            <br />
+            <h3>Nome: </h3>
+            <h3>Empresa: </h3>
 
-    <h1>Consulta de Holerite</h1>
-    <br />
-    <h3>Nome: </h3>
-    <h3>Empresa: </h3>
-    
+            <div class="form-group">
+                <label for="mes">Mês:</label>
+                <select class="form-control" id="mes">
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro" selected>Outubro</option> <!-- "Outubro" selecionado por padrão -->
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                </select>
+            </div>
 
-    <div class="form-group">
-        <label for="mes">Mês:</label>
-        <select class="form-control" id="mes">
-            <!-- Adicione opções para seleção de mês aqui -->
-        </select>
+            <div class="form-group">
+                <label for="ano">Ano:</label>
+                <select class="form-control" id="ano">
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option> 
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                   
+                </select>
+            </div>
+            <br />
+            <button class="btn btn-primary" id="gerarHolerite">Consultar</button>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="ano">Ano:</label>
-        <select class="form-control" id="ano">
-            <!-- Adicione opções para seleção de ano aqui -->
-        </select>
-    </div>
-    <br />
-    <button class="btn btn-primary" id="gerarHolerite">Gerar Holerite em PDF</button>
-</div>
-</div>
 </div>
