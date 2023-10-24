@@ -67,7 +67,6 @@ namespace SystemPag.Areas.Identity.Pages.Account
             /// </summary>
             [Required(ErrorMessage = "O CPF é obrigatório")]
             [Display(Name = "CPF")]
-            [EmailAddress]
             public string Email { get; set; }
 
             /// <summary>
@@ -131,7 +130,7 @@ namespace SystemPag.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "CPF ou senha incorretos.");
                     return Page();
                 }
             }
