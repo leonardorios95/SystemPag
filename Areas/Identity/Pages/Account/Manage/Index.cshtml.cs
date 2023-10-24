@@ -29,14 +29,30 @@ namespace SystemPag.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>]
-        [Display(Name = "Nome de usuário")]
+        [Display(Name = "Email")]
 
-        public string Username { get; set; }
+        public string Username { get; set; } 
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
+
+        [Required]
+        [Display(Name = "Nome")] 
+        public string Name { get; } = "Leonardo Rios";
+
+        [Required]
+        [Display(Name = "CPF")] 
+        public string CPF { get; } = "40919628826";
+
+        [Required]
+        [Display(Name = "Empresa")]
+        public string Company { get; } = "Drogaria São Paulo";
+
+        [Required]
+        [Display(Name = "CNPJ")]
+        public string CNPJ { get; } = "61542110011275";
         [TempData]
         public string StatusMessage { get; set; }
 

@@ -26,7 +26,7 @@
                     <option value="Julho">Julho</option>
                     <option value="Agosto">Agosto</option>
                     <option value="Setembro">Setembro</option>
-                    <option value="Outubro" selected>Outubro</option> 
+                    <option value="Outubro" >Outubro</option> 
                     <option value="Novembro">Novembro</option>
                     <option value="Dezembro">Dezembro</option>
                 </select>
@@ -35,9 +35,6 @@
             <div class="form-group">
                 <label for="ano">Ano:</label>
                 <select class="form-control" id="ano">
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
@@ -49,3 +46,27 @@
         </div>
     </div>
 </div>
+<div class="alert alert-success mt-3" id="success-message" style="display: none;">
+    <center> Clique <a href="#" id="file-link">aqui</a> para visualizar o arquivo</center>
+</div>
+<div class="alert alert-danger mt-3" id="error-message" style="display: none;">
+    <center>Arquivo não existente</center>
+</div>
+
+<script>
+    document.getElementById("gerarHolerite").addEventListener("click", function () {
+        // Lógica para verificar se o arquivo existe
+        var arquivoExiste = true; // Altere para true se o arquivo existir
+
+        if (arquivoExiste) {
+            // Se o arquivo existe, exiba a mensagem de sucesso com o link
+            document.getElementById("success-message").style.display = "block";
+            var fileLink = document.getElementById("file-link");
+            // Defina o link para a ação desejada
+            fileLink.href = "#"; // Substitua "#" pela URL real do arquivo
+        } else {
+            // Se o arquivo não existe, exiba a mensagem de erro
+            document.getElementById("error-message").style.display = "block";
+        }
+    });
+</script>
