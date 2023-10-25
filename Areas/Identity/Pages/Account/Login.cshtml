@@ -2,28 +2,34 @@
 @model LoginModel
 
 @{
+    // Define o layout a ser usado para esta página.
     Layout = "_LayoutDeslogado";
+    // Define o título da página.
     ViewData["Title"] = "Login - System Pag - Gestão em folha de pagamento";
-
 }
 
 <div class="px-5 ms-xl-4">
-    <img src="~/img/LOGO-removebg-preview.png" alt="Sua Imagem" class="img-fluid mx-auto d-block" ;">
+    <!-- Exibe a imagem da empresa, ajustando sua largura automaticamente. -->
+    <img src="~/img/LOGO-removebg-preview.png" alt="Sua Imagem" class="img-fluid mx-auto d-block">
 </div>
 <div class="row justify-content-center">
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
+                <!-- Título do formulário -->
                 <h2><center>Inicie sua sessão</center></h2>
                 <hr />
+                <!-- Exibe mensagens de validação do modelo, se houver. -->
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
+                    <!-- Campo de entrada para o endereço de email do usuário. -->
                     <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
                     <label asp-for="Input.Email" class="form-label"></label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <br />
                 <div class="form-floating">
+                    <!-- Campo de entrada para a senha do usuário. -->
                     <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
                     <label asp-for="Input.Password" class="form-label"></label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
@@ -32,22 +38,22 @@
                 <div>
                     <div class="checkbox">
                         <label asp-for="Input.RememberMe" class="form-label">
+                            <!-- Caixa de seleção para lembrar o usuário. -->
                             <input class="form-check-input" asp-for="Input.RememberMe" />
                             @Html.DisplayNameFor(m => m.Input.RememberMe)
                         </label>
                     </div>
                 </div>
                 <div>
+                    <!-- Botão para enviar o formulário de login. -->
                     <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Entrar</button>
                 </div>
                 <div>
                     <br>
                     <p class="text-center">
+                        <!-- Link para a página de redefinição de senha, caso o usuário tenha esquecido a senha. -->
                         <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
                     </p>
-
-
-
                 </div>
             </form>
         </section>
@@ -55,6 +61,6 @@
 </div>
 
 @section Scripts {
+        // Inclui scripts adicionais, se necessário.
     <partial name="_ValidationScriptsPartial" />
 }
-

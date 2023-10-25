@@ -22,14 +22,19 @@ namespace SystemPag.Areas.Identity.Pages.Account.Manage
             _logger = logger;
         }
 
+        // Este método é executado quando a página é acessada com um método GET.
         public async Task<IActionResult> OnGet()
         {
+            // Obtém o usuário atualmente autenticado.
             var user = await _userManager.GetUserAsync(User);
+
+            // Verifica se o usuário não foi encontrado.
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
+            // Retorna a página.
             return Page();
         }
     }

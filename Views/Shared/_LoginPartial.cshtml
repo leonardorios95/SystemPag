@@ -1,28 +1,28 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+﻿@using Microsoft.AspNetCore.Identity 
+@inject SignInManager<IdentityUser> SignInManager // Injeta o SignInManager com o tipo "IdentityUser""
+@inject UserManager<IdentityUser> UserManager // Injeta o UserManager com o tipo "IdentityUser""
 
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
+<ul class="navbar-nav"> <!-- Início da lista não ordenada (ul) com classe "navbar-nav" -->
+@if (SignInManager.IsSignedIn(User)) // Verifica se o usuário está autenticado usando SignInManager -->
 {
-    <li class="nav-item">
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" title=" Manage ">
-                <button class="btn btn-primary">Conta</button>
-            </form>
-    </li>
-        <li class="nav-item" style="margin-left: 10px";>
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                <button class="btn btn-danger">Sair</button>
+    <li class="nav-item"> <!-- Início de um item de lista (li) com classe "nav-item" -->
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Manage/ChangePassword" title=" Manage "> <!-- Formulário para a mudança de senha do usuário -->
+            <button class="btn btn-primary">Conta</button> <!-- Botão para acessar a conta do usuário -->
         </form>
-    </li>
+    </li> <!-- Fim do item de lista (li) -->
+    <li class="nav-item" style="margin-left: 10px";> <!-- Início de outro item de lista (li) com um estilo de margem à esquerda -->
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"> <!-- Formulário para fazer logout do usuário -->
+            <button class="btn btn-danger">Sair</button> <!-- Botão para fazer logout do usuário -->
+        </form>
+    </li> <!-- Fim do segundo item de lista (li) -->
 }
 else
 {
-    <li class="nav-item">
-            <!-- <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>-->
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
-    </li>
+    <li class="nav-item"> <!-- Início de um item de lista (li) -->
+        <!-- <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a> --> <!-- Comentado: Link para a página de registro (não utilizado) -->
+    </li> <!-- Fim do primeiro item de lista (li) -->
+    <li class="nav-item"> <!-- Início de outro item de lista (li) -->
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Entrar</a> <!-- Link para a página de login -->
+    </li> <!-- Fim do segundo item de lista (li) -->
 }
-</ul>
+</ul> <!-- Fim da lista não ordenada (ul) -->

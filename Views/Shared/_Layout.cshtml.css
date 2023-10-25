@@ -1,48 +1,58 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* Esta regra estiliza a classe 'a.navbar-brand', aplicando várias propriedades, como quebra normal de palavras, alinhamento central e quebra de palavras longas. */
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal; /* Espaçamento entre palavras normal */
+    text-align: center; /* Alinhamento central do texto */
+    word-break: break-all; /* Quebra de palavras longas se necessário */
 }
 
+/* Esta regra estiliza todos os elementos âncora 'a', definindo a cor azul (#0077cc) para os links. */
 a {
-  color: #0077cc;
+    color: #0077cc; /* Cor azul para links */
 }
 
+/* Esta regra estiliza a classe 'btn-primary', aplicando cores e bordas a botões com essa classe. */
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff; /* Cor do texto branca */
+    background-color: #1b6ec2; /* Cor de fundo azul */
+    border-color: #1861ac; /* Cor da borda azul mais escura */
 }
 
+/* Esta regra estiliza links de navegação ativos (como abas de navegação) que pertencem à classe 'nav-pills'. */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff; /* Cor do texto branca */
+    background-color: #1b6ec2; /* Cor de fundo azul */
+    border-color: #1861ac; /* Cor da borda azul mais escura */
 }
 
+/* Esta regra estiliza elementos com a classe 'border-top', adicionando uma borda superior de 1 pixel com a cor cinza (#e5e5e5). */
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
+/* Esta regra estiliza elementos com a classe 'border-bottom', adicionando uma borda inferior de 1 pixel com a cor cinza (#e5e5e5). */
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
+/* Esta regra estiliza elementos com a classe 'box-shadow', aplicando uma sombra de caixa com um deslocamento específico, desfoque e cor. */
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+/* Esta regra estiliza botões com a classe 'accept-policy', definindo o tamanho da fonte e a altura da linha. */
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem; /* Tamanho da fonte 1 rem */
+    line-height: inherit; /* Altura da linha herdada */
 }
 
+/* Esta regra estiliza elementos com a classe 'footer', posicionando-os na parte inferior da página e definindo propriedades de largura e espaçamento de texto. */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    position: absolute; /* Posição absoluta */
+    bottom: 0; /* Alinhado na parte inferior */
+    width: 100%; /* Largura de 100% */
+    white-space: nowrap; /* Evita quebra de texto */
+    line-height: 60px; /* Altura da linha de 60 pixels */
 }

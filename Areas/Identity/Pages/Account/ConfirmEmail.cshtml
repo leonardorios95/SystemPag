@@ -1,8 +1,12 @@
 ﻿@page
 @model ConfirmEmailModel
 @{
+    // Define o título da página como "Confirm email".
     ViewData["Title"] = "Confirm email";
 }
 
+<!-- Exibe o título da página definido acima. -->
 <h1>@ViewData["Title"]</h1>
+
+<!-- Inclui uma seção parcial chamada "_StatusMessage" e passa o modelo (Model.StatusMessage) para ela. -->
 <partial name="_StatusMessage" model="Model.StatusMessage" />

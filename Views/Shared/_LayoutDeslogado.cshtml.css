@@ -1,48 +1,58 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* Comentário de Cabeçalho: Consulte a documentação em https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+para obter detalhes sobre a configuração deste projeto para agrupar e minimizar ativos web estáticos. */
 
+/* Estilos para o elemento âncora com classe 'navbar-brand' */
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal; /* Define quebras de linha normais */
+    text-align: center; /* Centraliza o texto */
+    word-break: break-all; /* Quebra de palavra */
 }
 
+/* Estilos para todos os elementos âncora */
 a {
-  color: #0077cc;
+    color: #0077cc; /* Define a cor do texto como azul (#0077cc) */
 }
 
+/* Estilos para botões com a classe 'btn-primary' */
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff; /* Define a cor do texto como branco (#fff) */
+    background-color: #1b6ec2; /* Define a cor de fundo como azul (#1b6ec2) */
+    border-color: #1861ac; /* Define a cor da borda como azul escuro (#1861ac) */
 }
 
+/* Estilos para links de navegação ativos ou destacados */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff; /* Define a cor do texto como branco (#fff) */
+    background-color: #1b6ec2; /* Define a cor de fundo como azul (#1b6ec2) */
+    border-color: #1861ac; /* Define a cor da borda como azul escuro (#1861ac) */
 }
 
+/* Estilos para elementos com classe 'border-top' */
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5; /* Define uma borda superior de 1px sólida com uma cor cinza (#e5e5e5) */
 }
+
+/* Estilos para elementos com classe 'border-bottom' */
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; /* Define uma borda inferior de 1px sólida com uma cor cinza (#e5e5e5) */
 }
 
+/* Estilos para adicionar uma sombra à caixa (box shadow) */
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); /* Adiciona uma sombra sutil à caixa */
 }
 
+/* Estilos para botões com a classe 'accept-policy' */
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem; /* Define o tamanho da fonte como 1 rem */
+    line-height: inherit; /* Mantém a altura da linha inalterada */
 }
 
+/* Estilos para o rodapé da página */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 0; /* Coloca o rodapé na parte inferior da página */
+    width: 100%; /* Define a largura como 100% da largura da página */
+    white-space: nowrap; /* Evita quebras de linha no texto */
+    line-height: 60px; /* Define a altura da linha como 60px */
 }

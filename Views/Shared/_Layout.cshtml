@@ -1,44 +1,47 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SystemPag</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SystemPag.styles.css" asp-append-version="true" />
+    <meta charset="utf-8" />  <!-- Definindo a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- Configurações de viewport -->
+    <title>@ViewData["Title"] - SystemPag</title>  <!-- Título da página dinamicamente definido -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />  <!-- Inclusão de arquivo CSS do Bootstrap -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />  <!-- Inclusão de arquivo CSS personalizado com versão dinâmica -->
+    <link rel="stylesheet" href="~/SystemPag.styles.css" asp-append-version="true" />  <!-- Inclusão de outro arquivo CSS personalizado com versão dinâmica -->
 </head>
 <body style="background-color: lightblue;">
+    <!-- Definindo cor de fundo da página -->
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-lightblue border-bottom box-shadow mb-3">
+            <!-- Barra de navegação -->
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/img/LOGO-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="">
-
+                    <!-- Logo e link para a página inicial -->
+                    <img src="~/img/LOGO-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="">  <!-- Inserindo um logotipo -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>  <!-- Botão de alternar para menus em telas menores -->
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">System Pag</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">System Pag</a>  <!-- Link para a página principal -->
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <partial name="_LoginPartial" />  <!-- Inclusão de uma seção parcial chamada "_LoginPartial" -->
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
+        <!-- Conteúdo principal dentro de um contêiner -->
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody()  <!-- Renderização do corpo da página (conteúdo dinâmico) -->
         </main>
     </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>  <!-- Inclusão de biblioteca jQuery -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  <!-- Inclusão de biblioteca Bootstrap -->
+    <script src="~/js/site.js" asp-append-version="true"></script>  <!-- Inclusão de arquivo JavaScript personalizado com versão dinâmica -->
+    @await RenderSectionAsync("Scripts", required: false)  <!-- Renderização de seção de scripts, se existir -->
 </body>
 </html>

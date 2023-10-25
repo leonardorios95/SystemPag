@@ -1,22 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Consulta de Holerite";
+    ViewData["Title"] = "Consulta de Holerite";  // Define o título da página
 }
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="text-center">
-            <h2>Demonstrativo de Pagamento</h2>
-            <br />
-            <h5>Nome: </h5> 
-            Leonardo Rios <br/>
-            <h5>Empresa: </h5> 
-            Drogaria São Paulo
+                <h2>Demonstrativo de Pagamento</h2>  <!-- Título principal -->
+                <br />
+                <h5>Nome: </h5>
+                Leonardo Rios <br />  <!-- Nome do funcionário -->
+                <h5>Empresa: </h5>
+                Drogaria São Paulo  <!-- Nome da empresa -->
             </div>
 
             <div class="form-group">
-                <label for="mes">Mês:</label>
+                <label for="mes">Mês:</label>  <!-- Rótulo para seleção do mês -->
                 <select class="form-control" id="mes">
+                    <!-- Opções para seleção do mês -->
                     <option value="Janeiro">Janeiro</option>
                     <option value="Fevereiro">Fevereiro</option>
                     <option value="Março">Março</option>
@@ -26,44 +27,49 @@
                     <option value="Julho">Julho</option>
                     <option value="Agosto">Agosto</option>
                     <option value="Setembro">Setembro</option>
-                    <option value="Outubro" >Outubro</option> 
+                    <option value="Outubro">Outubro</option>  <!-- Mês de outubro -->
                     <option value="Novembro">Novembro</option>
                     <option value="Dezembro">Dezembro</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="ano">Ano:</label>
+                <label for="ano">Ano:</label>  <!-- Rótulo para seleção do ano -->
                 <select class="form-control" id="ano">
+                    <!-- Opções para seleção do ano -->
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
-
                 </select>
             </div>
             <br />
             <button class="btn btn-primary btn-block mx-auto w-100" id="gerarHolerite">Consultar</button>
+            <!-- Botão "Consultar" para iniciar a ação -->
         </div>
     </div>
 </div>
+
 <div class="alert alert-success mt-3" id="success-message" style="display: none;">
     <center> Clique <a href="#" id="file-link">aqui</a> para visualizar o arquivo</center>
+    <!-- Mensagem de sucesso com um link -->
 </div>
+
 <div class="alert alert-danger mt-3" id="error-message" style="display: none;">
     <center>Arquivo não existente</center>
+    <!-- Mensagem de erro para arquivo inexistente -->
 </div>
 
 <script>
     document.getElementById("gerarHolerite").addEventListener("click", function () {
         // Lógica para verificar se o arquivo existe
-        var arquivoExiste = true; // Altere para true se o arquivo existir
+        var arquivoExiste = true;  // Altere para true se o arquivo existir
 
         if (arquivoExiste) {
             // Se o arquivo existe, exiba a mensagem de sucesso com o link
-            document.getElementById("success-message").style.display = "block";
+            document.getElementById("success-message").style display = "block";
             var fileLink = document.getElementById("file-link");
             // Defina o link para a ação desejada
-            fileLink.href = "#"; // Substitua "#" pela URL real do arquivo
+            fileLink.href = "#";  // Substitua "#" pela URL real do arquivo
         } else {
             // Se o arquivo não existe, exiba a mensagem de erro
             document.getElementById("error-message").style.display = "block";

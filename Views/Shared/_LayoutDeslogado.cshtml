@@ -1,24 +1,27 @@
 ﻿<!DOCTYPE html>
+ <!-- Declaração do tipo de documento HTML -->
 <html lang="en">
+ <!-- Define o idioma da página como inglês -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SystemPag</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SystemPag.styles.css" asp-append-version="true" />
+    <meta charset="utf-8" /> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura a viewport para dispositivos móveis -->
+    <title>@ViewData["Title"] - SystemPag</title> <!-- Título da página, que inclui um valor dinâmico do ViewData -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> <!-- Link para o arquivo CSS do Bootstrap -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> <!-- Link para o arquivo CSS personalizado "site.css" -->
+    <link rel="stylesheet" href="~/SystemPag.styles.css" asp-append-version="true" /> <!-- Link para outro arquivo CSS personalizado -->
 </head>
 <body style="background-color: lightblue;">
+    <!-- Corpo da página com um estilo de fundo azul claro -->
     <div class="container">
+        <!-- Container Bootstrap para centralizar o conteúdo -->
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() <!-- Renderiza o conteúdo principal da página -->
         </main>
     </div>
 
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> <!-- Link para o arquivo JavaScript do jQuery -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- Link para o arquivo JavaScript do Bootstrap (inclui Popper.js) -->
+    <script src="~/js/site.js" asp-append-version="true"></script> <!-- Link para um arquivo JavaScript personalizado "site.js" -->
+    @await RenderSectionAsync("Scripts", required: false) <!-- Renderiza uma seção opcional de scripts -->
 </body>
 </html>

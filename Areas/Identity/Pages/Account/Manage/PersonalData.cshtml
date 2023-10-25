@@ -1,7 +1,10 @@
 ﻿@page
 @model PersonalDataModel
 @{
+    // Define o título da página.
     ViewData["Title"] = "Ajuda e suporte";
+
+    // Define a página ativa na navegação com base na classe ManageNavPages.
     ViewData["ActivePage"] = ManageNavPages.PersonalData;
 }
 
@@ -9,14 +12,16 @@
 
 <div class="row">
     <div class="col-md-6">
+        <!-- Fornece informações de contato e suporte. -->
         Em caso de dúvidas ou sugestões entre em contato conosco.<br />
-        <p >
-        Telefone: 11 2023-2829<br />
-        E-mail: suporte@systempag.com.br
+        <p>
+            Telefone: 11 2023-2829<br />
+            E-mail: suporte@systempag.com.br
         </p>
     </div>
 </div>
 
 @section Scripts {
+        <!-- Inclui scripts adicionais, se necessário. -->
     <partial name="_ValidationScriptsPartial" />
 }

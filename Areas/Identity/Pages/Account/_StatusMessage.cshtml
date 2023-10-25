@@ -1,8 +1,13 @@
 ﻿@model string
 
+<!-- Verifica se o modelo (string) não é nulo ou vazio. -->
 @if (!String.IsNullOrEmpty(Model))
 {
+    // Define a classe CSS com base no conteúdo da mensagem.
+    // Se a mensagem começar com "Error," a classe será "danger," caso contrário, "success."
     var statusMessageClass = Model.StartsWith("Error") ? "danger" : "success";
+
+    <!-- Exibe uma mensagem de alerta com base na classe definida acima. -->
     <div class="alert alert-@statusMessageClass alert-dismissible" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         @Model
